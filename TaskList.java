@@ -7,7 +7,7 @@ public class TaskList {
         size = 0;
     }
 
-    // Add a new task to the END of the list
+
     public void addTask(String description) {
         TaskNode node = new TaskNode(new Task(description));
         if (head == null) {
@@ -35,7 +35,6 @@ public class TaskList {
         return false;
     }
 
-    // Alternative: mark by zero-based index (handy if descriptions repeat)
     public boolean markTaskCompleted(int index) {
         if (index < 0 || index >= size) return false;
         TaskNode cur = head;
@@ -44,7 +43,6 @@ public class TaskList {
         return true;
     }
 
-    // Print all tasks with their indices
     public void printAllTasks() {
         if (head == null) {
             System.out.println("   (no tasks)");
