@@ -20,7 +20,6 @@ public class TaskList {
         size++;
     }
 
-    // Mark task completed by description (case-insensitive)
     public boolean markTaskCompleted(String description) {
         if (description == null) return false;
         String target = description.trim().toLowerCase();
